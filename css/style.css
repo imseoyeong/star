@@ -80,7 +80,8 @@ h3{
     color:#333;
 }
 .sitemap_box .sitemap_box_title > li > a:hover{
-    border-bottom: 2px solid #333;
+
+    color:#fff;
 }
 
 .sitemap_box .sitemap_box_title .s_sub a{
@@ -89,8 +90,9 @@ h3{
     color:#555;
 }
 .sitemap_box .sitemap_box_title .s_sub a:hover{
-    border-bottom: 2px solid rgb(228, 175, 0);
+    color:#fff;
     font-weight: 600;
+
 }
 
 .sitemap_box h2 a{
