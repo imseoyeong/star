@@ -12,18 +12,27 @@ $(function(){
 
     $('.lan button').click(function(){
         $('.lan ul').slideToggle();
+
+        // $('.lan button').addClass('active');
+     
+
+
     });
+
 
 
 
     $('.popup_close').click(function(){
-        $('.popup').hide();
-        $('.popup_close').hide();
+        $('.popup').fadeOut();
+        $('.popup_close').fadeOut();
     });
     $('.popup_open').click(function(){
-        $('.popup').show();
-        $('.popup_close').show();
+        $('.popup').fadeIn();
+        $('.popup_close').fadeIn ();
     });
+
+
+    
 
 
 

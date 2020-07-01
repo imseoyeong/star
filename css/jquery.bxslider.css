@@ -72,12 +72,34 @@ ul.bxslider {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
+  position: relative;
 }
-.bx-wrapper .bx-pager.bx-default-pager a:hover,
+
+.bx-wrapper .bx-pager.bx-default-pager a::after{
+  display: block;
+  content: '';
+  width:0%;
+  height:100%;
+  position:absolute; top:0; left:0;
+  background-color:#ffaf00;
+  
+
+}
+
+/* .bx-wrapper .bx-pager.bx-default-pager a:hover,
 .bx-wrapper .bx-pager.bx-default-pager a.active,
-.bx-wrapper .bx-pager.bx-default-pager a:focus {
+.bx-wrapper .bx-pager.bx-default-pager a:focus{
   background: #ffaf00;
-}
+} */
+
+.bx-wrapper .bx-pager.bx-default-pager a:hover::after,
+.bx-wrapper .bx-pager.bx-default-pager a.active::after,
+.bx-wrapper .bx-pager.bx-default-pager a:focus::after{
+  width:100%;
+  transition: 0.8s;
+} 
+
+
 .bx-wrapper .bx-pager-item,
 .bx-wrapper .bx-controls-auto .bx-controls-auto-item {
   display: inline-block;
@@ -92,7 +114,7 @@ ul.bxslider {
 /* DIRECTION CONTROLS (NEXT / PREV) */
 .bx-wrapper .bx-prev {
   left: 20px;
-  background: url('images/controls.png') no-repeat 0 -32px;
+  background: url('../images/main_left.png') no-repeat 0px 0px;
 }
 .bx-wrapper .bx-prev:hover,
 .bx-wrapper .bx-prev:focus {
@@ -100,21 +122,27 @@ ul.bxslider {
 }
 .bx-wrapper .bx-next {
   right: 20px;
-  background: url('images/controls.png') no-repeat -43px -32px;
+  background: url('../images/main_right.png') no-repeat 0px 0px;
 }
-.bx-wrapper .bx-next:hover,
+/* .bx-wrapper .bx-next:hover,
 .bx-wrapper .bx-next:focus {
   background-position: -43px 0;
-}
+} */
 .bx-wrapper .bx-controls-direction a {
   position: absolute;
-  top: 50%;
+  top: 35%;
   outline: 0;
-  width: 32px;
-  height: 32px;
+  width: 80px;
+  height: 200px;
   text-indent: -9997px;
   z-index: 9997;
 }
+
+.bx-wrapper .bx-controls-direction a img{
+  width:100%;
+}
+
+
 .bx-wrapper .bx-controls-direction a.disabled {
   display: none;
 }
